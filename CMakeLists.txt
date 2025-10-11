@@ -35,5 +35,8 @@ add_executable(LuaTest ${SOURCES} ${HEADERS})
 # Add include directory
 target_include_directories(LuaTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Lua/include)
 # Add lib directory
+if(MSVC)
 target_link_libraries(LuaTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Lua/lib/lua5.4.3-static.lib)
-# ----------------
+elseif(APPLE)
+target_link_libraries(LuaTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Lua/lib/liblua.a)
+endif()

@@ -28,7 +28,7 @@
 # Compiled Static libraries
 *.lai
 *.la
-*.a
+# *.a - needs this for Mac
 
 # Executables
 *.out
@@ -38,3 +38,4 @@
 *.dwo
 /build
 *.user
+.DS_Store

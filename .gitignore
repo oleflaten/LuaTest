@@ -31,7 +31,6 @@
 # *.a - needs this for Mac
 
 # Executables
-*.out
 *.app
 
 # debug information files

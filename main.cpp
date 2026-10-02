@@ -86,7 +86,7 @@ int main() {
     //kjører den samme scriptfila, men denne er kompilert med luac.exe
 	//runs the same script file, but this one is compiled with luac.exe
     std::cout << "Compiled version:\n";
-    luaL_dofile(lua_vm, "../LuaTest/test1.out");
+    luaL_dofile(lua_vm, (SCRIPT_PATH + "test1.out").c_str());
     std::cout << "Finished with compiled script file\n";
     std::cout << std::endl;
 

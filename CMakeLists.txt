@@ -1,15 +1,12 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.19)
 
 project(LuaTest LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(HEADERS
-    functions.h
-)
-
 set(SOURCES
+    functions.h
     main.cpp
 )
 
@@ -26,7 +23,8 @@ add_custom_target(Scripts
     SOURCES ${SCRIPT_FILES}
 )
 
-add_executable(LuaTest ${SOURCES} ${HEADERS})
+# in its own Scripts-"folder" in the IDE
+add_executable(LuaTest ${SOURCES})
 
 # Adding External library:
 # Linking static!!!

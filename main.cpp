@@ -10,6 +10,7 @@ extern "C"
 //could also have used #include "lua.hpp", which contains the code above
 
 #include "functions.h"
+#include "test_binding.h"
 
 int main() {
 
@@ -126,6 +127,13 @@ int main() {
 
     std::cout << std::endl;
     std::cout << "The C-program says that the function called from Lua gave the result: " << s << std::endl;
+
+    //-----------------------------------------------------------------------------
+    //6. - using a C++ class (Test) from Lua:
+    //    (see test_binding.h for the userdata/metatable setup)
+    std::cout << "6. - C++ class from Lua:\n";
+    register_Test(lua_vm);
+    luaL_dofile(lua_vm, (SCRIPT_PATH + "test4.lua").c_str());
 
 	//Lua must be closed:
 	lua_close(lua_vm);

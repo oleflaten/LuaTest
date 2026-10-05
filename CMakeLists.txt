@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SOURCES
     functions.h
+    test.h
+    test_binding.h
     main.cpp
 )
 
@@ -16,6 +18,7 @@ set(SCRIPT_FILES
     test1.lua
     test2.lua
     test3.lua
+    test4.lua
 )
 
 # Add the script files to the project
